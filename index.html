@@ -13,278 +13,279 @@
 </head>
 <body>
 
-<!-- Cover -->
-<div class="cover" id="cover">
-    <div class="cover-content">
-        <h1>Budi & Sari</h1>
-        <p>UNDANGAN PERNIKAHAN</p>
+    <div class="bg-container"></div>
+    <!-- Cover -->
+    <div class="cover" id="cover">
+        <div class="cover-content">
+            <h1>Budi & Sari</h1>
+            <p>UNDANGAN PERNIKAHAN</p>
 
-        <!-- TAMBAHAN NAMA TAMU -->
-        <p style="margin-top:20px;">Kepada Yth.</p>
-        <p id="guestName" style="font-weight:bold; font-size:20px;">
-            Tamu Undangan
-        </p>
+            <!-- TAMBAHAN NAMA TAMU -->
+            <p style="margin-top:20px;">Kepada Yth.</p>
+            <p id="guestName" style="font-weight:bold; font-size:20px;">
+                Tamu Undangan
+            </p>
 
-        <button class="open-btn" onclick="openInvitation()">Buka Undangan</button>
+            <button class="open-btn" onclick="openInvitation()">Buka Undangan</button>
+        </div>
     </div>
-</div>
 
-<!-- Music -->
+    <!-- Music -->
 
-<audio id="bgMusic" loop>
-    <source src="islami.mp3" type="audio/mpeg">
-</audio>
+    <audio id="bgMusic" loop>
+        <source src="islami.mp3" type="audio/mpeg">
+    </audio>
 
-<button class="music-toggle playing" id="musicToggle" onclick="toggleMusic()">
-    <span class="music-icon">🎵</span>
-</button>
+    <button class="music-toggle playing" id="musicToggle" onclick="toggleMusic()">
+        <span class="music-icon">🎵</span>
+    </button>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1 class="floating">Budi & Sari</h1>
-        <p class="subtitle">THE WEDDING OF</p>
-        <p class="date">25 Juni 2026</p>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="floating">Budi & Sari</h1>
+            <p class="subtitle">THE WEDDING OF</p>
+            <p class="date">25 Juni 2026</p>
+        </div>
+    </section>
 
-<!-- Couple Section -->
-<section class="couple-section" id="couple">
-    <div class="section-title">
-        <h2>Mempelai</h2>
+    <!-- Couple Section -->
+    <section class="couple-section" id="couple">
+        <div class="section-title">
+            <h2>Mempelai</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="couple-container">
+            <div class="couple-card">
+                <div class="couple-photo"><img src="https://i.pinimg.com/736x/e9/6e/d8/e96ed8aee365c7eb1b3b253d33112980.jpg" alt="Mempelai Pria"></div>
+                <h4 class="couple-name">Budi Santoso, S.T.</h4>
+                <div class="couple-info">
+                    <p><strong>Putra Pertama dari:</strong></p>
+                    <p class="couple-parents">Bapak Suharto<br>& Ibu Sumiati</p>
+                </div>
+            </div>
+            <div class="couple-card">
+                <div class="couple-photo"><img src="https://i.pinimg.com/736x/7c/36/b0/7c36b036746763ac23574a6d0ee5d481.jpg" alt="Mempelai Wanita"></div>
+                <h4 class="couple-name">Sari Wulandari, S.E.</h4>
+                <div class="couple-info">
+                    <p><strong>Putri Kedua dari:</strong></p>
+                    <p class="couple-parents">Bapak Wibowo<br>& Ibu Siti Aminah</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section class="event-section" id="event">
+        <div class="section-title">
+                <h2>Acara</h2>
         <div class="divider"></div>
     </div>
-    <div class="couple-container">
-        <div class="couple-card">
-            <div class="couple-photo"><img src="https://i.pinimg.com/736x/e9/6e/d8/e96ed8aee365c7eb1b3b253d33112980.jpg" alt="Mempelai Pria"></div>
-            <h3 class="couple-name">Budi Santoso, S.T.</h3>
-            <div class="couple-info">
-                <p><strong>Putra Pertama dari:</strong></p>
-                <p class="couple-parents">Bapak Suharto<br>& Ibu Sumiati</p>
+    <div class="events-container">
+        <div class="event-card">
+            <div class="event-icon">💒</div>
+            <h3 class="event-title">Akad Nikah</h3>
+            <p class="event-detail">Masjid Agung Kota</p>
+            <p class="event-date">25 Juni 2026, 09:00 WIB</p>
+        </div>
+        <div class="event-card">
+            <div class="event-icon">🎉</div>
+            <h3 class="event-title">Resepsi</h3>
+            <p class="event-detail">Gedung Serba Guna</p>
+            <p class="event-date">25 Juni 2026, 12:00 WIB</p>
+        </div>
+    </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section" id="story">
+        <div class="section-title">
+            <h2>Our Story</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="story-timeline">
+            <div class="story-item">
+                <div class="story-dot"></div>
+                <div class="story-content">
+                    <div class="story-date">2018</div>
+                    <div class="story-text">Pertemuan pertama di kampus, mulai mengenal satu sama lain.</div>
+                </div>
+            </div>
+            <div class="story-item">
+                <div class="story-dot"></div>
+                <div class="story-content">
+                    <div class="story-date">2020</div>
+                    <div class="story-text">Mulai menjalin hubungan serius dan saling mendukung.</div>
+                </div>
+            </div>
+            <div class="story-item">
+                <div class="story-dot"></div>
+                <div class="story-content">
+                    <div class="story-date">2025</div>
+                    <div class="story-text">Lamaran romantis yang mengukuhkan niat untuk menikah.</div>
+                </div>
             </div>
         </div>
-        <div class="couple-card">
-            <div class="couple-photo"><img src="https://i.pinimg.com/736x/7c/36/b0/7c36b036746763ac23574a6d0ee5d481.jpg" alt="Mempelai Wanita"></div>
-            <h3 class="couple-name">Sari Wulandari, S.E.</h3>
-            <div class="couple-info">
-                <p><strong>Putri Kedua dari:</strong></p>
-                <p class="couple-parents">Bapak Wibowo<br>& Ibu Siti Aminah</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-title">
+            <h2>Galeri Foto</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="gallery-container">
+            <div class="gallery-item"><img src="https://tendasidomulyo.com/wp-content/uploads/2023/09/Konsep-foto-prewedding-Islami-namun-tetap-estetik.jpg" alt="Foto 1"></div>
+            <div class="gallery-item"><img src="https://weddingmarket.com/storage/images/artikelideacontent/21-03-18-17-05-36605325f0de602605325f0de604.webp" alt="Foto 2"></div>
+            <div class="gallery-item"><img src="https://ammora.co/wp-content/uploads/2019/01/prewedding-islami.jpg" alt="Foto 3"></div>
+            <div class="gallery-item"><img src="https://ammora.co/wp-content/uploads/2019/01/prewedding-islami-5.jpg" alt="Foto 4"></div>
+            <div class="gallery-item"><img src="https://kataomed.com/wp-content/uploads/2020/07/prewedding-diera-bachir.jpg" alt="Foto 5"></div>
+            <div class="gallery-item"><img src="https://i.pinimg.com/736x/12/0b/9e/120b9e7265781dd3cfe6770cd590bb84.jpg" alt="Foto 6"></div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" id="countdown">
+        <div class="section-title">
+            <h2>Countdown Menuju Hari Bahagia</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="countdown-container">
+            <div class="countdown-box">
+                <span class="countdown-number" id="days">0</span>
+                <span class="countdown-label">Hari</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-number" id="hours">0</span>
+                <span class="countdown-label">Jam</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-number" id="minutes">0</span>
+                <span class="countdown-label">Menit</span>
+            </div>
+            <div class="countdown-box">
+                <span class="countdown-number" id="seconds">0</span>
+                <span class="countdown-label">Detik</span>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Event Section -->
-<section class="event-section" id="event">
-    <div class="section-title">
-            <h2>Acara</h2>
-    <div class="divider"></div>
-</div>
-<div class="events-container">
-    <div class="event-card">
-        <div class="event-icon">💒</div>
-        <h3 class="event-title">Akad Nikah</h3>
-        <p class="event-detail">Masjid Agung Kota</p>
-        <p class="event-date">25 Juni 2026, 09:00 WIB</p>
-    </div>
-    <div class="event-card">
-        <div class="event-icon">🎉</div>
-        <h3 class="event-title">Resepsi</h3>
-        <p class="event-detail">Gedung Serba Guna</p>
-        <p class="event-date">25 Juni 2026, 12:00 WIB</p>
-    </div>
-</div>
-</section>
-
-<!-- Story Section -->
-<section class="story-section" id="story">
-    <div class="section-title">
-        <h2>Our Story</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="story-timeline">
-        <div class="story-item">
-            <div class="story-dot"></div>
-            <div class="story-content">
-                <div class="story-date">2018</div>
-                <div class="story-text">Pertemuan pertama di kampus, mulai mengenal satu sama lain.</div>
+    <!-- Gifts Section -->
+    <section class="gifts-section" id="gifts">
+        <div class="section-title">
+            <h2>Kirim Hadiah / Uang</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="gifts-container">
+            <p>Jika ingin mengirimkan hadiah atau ucapan dalam bentuk transfer, Anda bisa menggunakan QRIS atau m-banking berikut:</p>
+            <div class="gift-methods">
+                <!-- QRIS -->
+                <div class="gift-card">
+                    <h3>QRIS</h3>
+                    <img src="https://d2v6npc8wmnkqk.cloudfront.net/storage/26035/conversions/Tipe-QRIS-statis-small-large.jpg" alt="QRIS Budi & Sari" class="qris-img">
+                    <p>Scan QR di atas untuk transfer langsung</p>
+                </div>
+                <!-- m-Banking -->
+                <div class="gift-card">
+                    <h3>m-Banking / Transfer Bank</h3>
+                    <p><strong>Bank:</strong> BCA</p>
+                    <p><strong>Nama Rekening:</strong> Budi Santoso & Sari Wulandari</p>
+                    <p><strong>No. Rekening:</strong> 123-456-7890</p>
+                    <p>Silakan transfer sesuai nominal pilihan Anda</p>
+                </div>
             </div>
         </div>
-        <div class="story-item">
-            <div class="story-dot"></div>
-            <div class="story-content">
-                <div class="story-date">2020</div>
-                <div class="story-text">Mulai menjalin hubungan serius dan saling mendukung.</div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section" id="rsvp">
+        <div class="section-title">
+            <h2>Konfirmasi Kehadiran</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="rsvp-form">
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" id="name" placeholder="Masukkan nama Anda">
             </div>
-        </div>
-        <div class="story-item">
-            <div class="story-dot"></div>
-            <div class="story-content">
-                <div class="story-date">2025</div>
-                <div class="story-text">Lamaran romantis yang mengukuhkan niat untuk menikah.</div>
+            <div class="form-group">
+                <label for="attendance">Kehadiran</label>
+                <select id="attendance">
+                    <option value="">Pilih</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Gallery Section -->
-<section class="gallery-section" id="gallery">
-    <div class="section-title">
-        <h2>Galeri Foto</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="gallery-container">
-        <div class="gallery-item"><img src="https://tendasidomulyo.com/wp-content/uploads/2023/09/Konsep-foto-prewedding-Islami-namun-tetap-estetik.jpg" alt="Foto 1"></div>
-        <div class="gallery-item"><img src="https://weddingmarket.com/storage/images/artikelideacontent/21-03-18-17-05-36605325f0de602605325f0de604.webp" alt="Foto 2"></div>
-        <div class="gallery-item"><img src="https://ammora.co/wp-content/uploads/2019/01/prewedding-islami.jpg" alt="Foto 3"></div>
-        <div class="gallery-item"><img src="https://ammora.co/wp-content/uploads/2019/01/prewedding-islami-5.jpg" alt="Foto 4"></div>
-        <div class="gallery-item"><img src="https://kataomed.com/wp-content/uploads/2020/07/prewedding-diera-bachir.jpg" alt="Foto 5"></div>
-        <div class="gallery-item"><img src="https://i.pinimg.com/736x/12/0b/9e/120b9e7265781dd3cfe6770cd590bb84.jpg" alt="Foto 6"></div>
-    </div>
-</section>
-
-<!-- Countdown Section -->
-<section class="countdown-section" id="countdown">
-    <div class="section-title">
-        <h2>Countdown Menuju Hari Bahagia</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="countdown-container">
-        <div class="countdown-box">
-            <span class="countdown-number" id="days">0</span>
-            <span class="countdown-label">Hari</span>
-        </div>
-        <div class="countdown-box">
-            <span class="countdown-number" id="hours">0</span>
-            <span class="countdown-label">Jam</span>
-        </div>
-        <div class="countdown-box">
-            <span class="countdown-number" id="minutes">0</span>
-            <span class="countdown-label">Menit</span>
-        </div>
-        <div class="countdown-box">
-            <span class="countdown-number" id="seconds">0</span>
-            <span class="countdown-label">Detik</span>
-        </div>
-    </div>
-</section>
-
-<!-- Gifts Section -->
-<section class="gifts-section" id="gifts">
-    <div class="section-title">
-        <h2>Kirim Hadiah / Uang</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="gifts-container">
-        <p>Jika ingin mengirimkan hadiah atau ucapan dalam bentuk transfer, Anda bisa menggunakan QRIS atau m-banking berikut:</p>
-        <div class="gift-methods">
-            <!-- QRIS -->
-            <div class="gift-card">
-                <h3>QRIS</h3>
-                <img src="https://d2v6npc8wmnkqk.cloudfront.net/storage/26035/conversions/Tipe-QRIS-statis-small-large.jpg" alt="QRIS Budi & Sari" class="qris-img">
-                <p>Scan QR di atas untuk transfer langsung</p>
+            <div class="form-group">
+                <label for="message">Pesan / Doa</label>
+                <textarea id="message" placeholder="Tulis pesan atau doa untuk kami"></textarea>
             </div>
-            <!-- m-Banking -->
-            <div class="gift-card">
-                <h3>m-Banking / Transfer Bank</h3>
-                <p><strong>Bank:</strong> BCA</p>
-                <p><strong>Nama Rekening:</strong> Budi Santoso & Sari Wulandari</p>
-                <p><strong>No. Rekening:</strong> 123-456-7890</p>
-                <p>Silakan transfer sesuai nominal pilihan Anda</p>
-            </div>
+            <a id="whatsappLink" href="#" target="_blank"><button class="submit-btn">Kirim via WhatsApp</button></a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- RSVP Section -->
-<section class="rsvp-section" id="rsvp">
-    <div class="section-title">
-        <h2>Konfirmasi Kehadiran</h2>
-        <div class="divider"></div>
-    </div>
-    <div class="rsvp-form">
-        <div class="form-group">
-            <label for="name">Nama</label>
-            <input type="text" id="name" placeholder="Masukkan nama Anda">
-        </div>
-        <div class="form-group">
-            <label for="attendance">Kehadiran</label>
-            <select id="attendance">
-                <option value="">Pilih</option>
-                <option value="Hadir">Hadir</option>
-                <option value="Tidak Hadir">Tidak Hadir</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="message">Pesan / Doa</label>
-            <textarea id="message" placeholder="Tulis pesan atau doa untuk kami"></textarea>
-        </div>
-        <a id="whatsappLink" href="#" target="_blank"><button class="submit-btn">Kirim via WhatsApp</button></a>
-    </div>
-</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Budi & Sari. Made with B&L Invitation 💖</p>
+    </footer>
 
-<!-- Footer -->
-<footer class="footer">
-    <p>© 2024 Budi & Sari. Made with B&L Invitation 💖</p>
-</footer>
-
-<!-- Scripts -->
-<script>
-    // Cover Open
-    function openInvitation(){
-        document.getElementById('cover').classList.add('hidden');
-        bgMusic.play();
-    }
-
-    // Ambil nama tamu dari URL
-    function getGuestName() {
-        const params = new URLSearchParams(window.location.search);
-        const guest = params.get("to");
-
-        if (guest) {
-            document.getElementById("guestName").innerText =
-                decodeURIComponent(guest);
+    <!-- Scripts -->
+    <script>
+        // Cover Open
+        function openInvitation(){
+            document.getElementById('cover').classList.add('hidden');
+            bgMusic.play();
         }
-    }
 
-getGuestName();
+        // Ambil nama tamu dari URL
+        function getGuestName() {
+            const params = new URLSearchParams(window.location.search);
+            const guest = params.get("to");
 
-    // Background Music
-    var bgMusic = document.getElementById('bgMusic');
-    var musicToggle = document.getElementById('musicToggle');
-    function toggleMusic(){
-        if(bgMusic.paused){ bgMusic.play(); musicToggle.classList.add('playing'); }
-        else { bgMusic.pause(); musicToggle.classList.remove('playing'); }
-    }
+            if (guest) {
+                document.getElementById("guestName").innerText =
+                    decodeURIComponent(guest);
+            }
+        }
 
-    // Countdown
-    var weddingDate = new Date("JUNI 25, 2026 09:00:00").getTime();
-    setInterval(function(){
-        var now = new Date().getTime();
-        var distance = weddingDate - now;
-        document.getElementById('days').innerText = Math.floor(distance/(1000*60*60*24));
-        document.getElementById('hours').innerText = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-        document.getElementById('minutes').innerText = Math.floor((distance%(1000*60*60))/(1000*60));
-        document.getElementById('seconds').innerText = Math.floor((distance%(1000*60))/1000);
-    },1000);
+    getGuestName();
 
-    // Scroll Animations
-    const faders = document.querySelectorAll('.couple-card, .event-card, .story-item, .countdown-box, .rsvp-form, .section-title h2, .section-title .divider');
-    const appearOptions = { threshold:0.2, rootMargin:"0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, observer){
-        entries.forEach(entry => { if(entry.isIntersecting){ entry.target.style.opacity=1; entry.target.style.transform='translateY(0) scale(1)'; observer.unobserve(entry.target); } });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
+        // Background Music
+        var bgMusic = document.getElementById('bgMusic');
+        var musicToggle = document.getElementById('musicToggle');
+        function toggleMusic(){
+            if(bgMusic.paused){ bgMusic.play(); musicToggle.classList.add('playing'); }
+            else { bgMusic.pause(); musicToggle.classList.remove('playing'); }
+        }
 
-    // WhatsApp Link
-    document.getElementById('whatsappLink').addEventListener('click', function(){
-        var name = document.getElementById('name').value;
-        var attendance = document.getElementById('attendance').value;
-        var message = document.getElementById('message').value;
-        var text = `Assalamualaikum,\nNama: ${name}\nKehadiran: ${attendance}\nPesan/Doa: ${message}`;
-        this.href = `https://wa.me/6289528774815?text=` + encodeURIComponent(text);
-    });
-</script>
+        // Countdown
+        var weddingDate = new Date("JUNI 25, 2026 09:00:00").getTime();
+        setInterval(function(){
+            var now = new Date().getTime();
+            var distance = weddingDate - now;
+            document.getElementById('days').innerText = Math.floor(distance/(1000*60*60*24));
+            document.getElementById('hours').innerText = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+            document.getElementById('minutes').innerText = Math.floor((distance%(1000*60*60))/(1000*60));
+            document.getElementById('seconds').innerText = Math.floor((distance%(1000*60))/1000);
+        },1000);
+
+        // Scroll Animations
+        const faders = document.querySelectorAll('.couple-card, .event-card, .story-item, .countdown-box, .rsvp-form, .section-title h2, .section-title .divider');
+        const appearOptions = { threshold:0.2, rootMargin:"0px 0px -50px 0px" };
+        const appearOnScroll = new IntersectionObserver(function(entries, observer){
+            entries.forEach(entry => { if(entry.isIntersecting){ entry.target.style.opacity=1; entry.target.style.transform='translateY(0) scale(1)'; observer.unobserve(entry.target); } });
+        }, appearOptions);
+        faders.forEach(fader => appearOnScroll.observe(fader));
+
+        // WhatsApp Link
+        document.getElementById('whatsappLink').addEventListener('click', function(){
+            var name = document.getElementById('name').value;
+            var attendance = document.getElementById('attendance').value;
+            var message = document.getElementById('message').value;
+            var text = `Assalamualaikum,\nNama: ${name}\nKehadiran: ${attendance}\nPesan/Doa: ${message}`;
+            this.href = `https://wa.me/6289528774815?text=` + encodeURIComponent(text);
+        });
+    </script>
 </body>
 </html>
 
