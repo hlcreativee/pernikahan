@@ -4,15 +4,51 @@
         --dark:#2c2c2c; --pink:#fae6e6;
     }
     html { scroll-behavior: smooth; }
-    body { font-family:'Lora', serif; background:var(--light); color:var(--dark); overflow-x:hidden; }
     body {
+    font-family:'Lora', serif;
+    background: var(--light);
+    color: var(--dark);
     overflow-x: hidden;
-    }
-    
+    overflow-y: auto;
+}
+
     .cover.animate-out {
     transform: translateY(-100%);
     pointer-events: none;
     transition: transform 0.8s ease;
+}
+  /* Background fullscreen */
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh; /* dynamic viewport height */
+    background-image: url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1200');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    z-index: 0; /* di bawah konten */
+}
+
+/* Overlay tipis */
+.bg-container::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212,175,122,0.1), rgba(250,230,230,0.3));
+    backdrop-filter: blur(8px); /* ini bikin blur */
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .bg-container {
+        height: 100svh; /* safe viewport height HP */
+        background-attachment: scroll; /* supaya di HP tidak ngezoom saat scroll */
+    }
 }
 
     /* Cover */
@@ -47,17 +83,74 @@
     gap: 2rem;
     }
 
-    /* Hero */
-    .hero { height:100dvh; display:flex; align-items:center; justify-content:center;
-        background:linear-gradient(135deg, rgba(212,175,122,0.1), rgba(250,230,230,0.3)),
-                   url('https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=1200') center/cover fixed;
-        text-align:center; position:relative; overflow:hidden;
+ 
+/* Hero full screen */
+.hero {
+    position: relative;      /* biar overlay & content bisa layering */
+    width: 100%;
+    height: 100dvh;          /* fullscreen dinamis */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;     /* vertical center */
+    justify-content: center; /* horizontal center */
+    text-align: center;
+    overflow: visible;
+    z-index: 0;
+}
+
+/* Overlay tipis */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(212,175,122,0.1), rgba(250,230,230,0.3));
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;   /* agar berada di atas overlay */
+    z-index: 1;
+    opacity: 0;
+    animation: fadeInScale 1s ease forwards 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Teks */
+.hero-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    color: #8b7355;
+    margin-bottom: 1rem;
+}
+.hero-content .subtitle {
+    font-size: 1.3rem;
+    color: #8b7355;
+    letter-spacing: 5px;
+    margin-bottom: 2rem;
+}
+.hero-content .date {
+    font-size: 2rem;
+    color: #2c2c2c;
+    font-weight: 600;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .hero {
+        height: 100svh; /* safe viewport mobile */
     }
-    .hero::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(255,255,255,0.7); }
-    .hero-content { position:relative; z-index:1; opacity:0; animation:fadeInScale 1s ease forwards 0.3s; }
-    .hero h1 { font-family:'Great Vibes', cursive; font-size:6rem; color:var(--primary); margin-bottom:1rem; }
-    .hero .subtitle { font-size:1.3rem; color:var(--secondary); letter-spacing:5px; margin-bottom:2rem; }
-    .hero .date { font-size:2rem; color:var(--dark); font-weight:600; }
+    .hero-content h1 { font-size: 3.5rem; }
+    .hero-content .subtitle { font-size: 1.1rem; }
+    .hero-content .date { font-size: 1.5rem; }
+}
 
     /* Sections */
     section { padding:5rem 2rem; max-width:1200px; margin:0 auto; }
@@ -66,17 +159,81 @@
     .section-title .divider { width:100px; height:3px; background:var(--primary); margin:1rem auto; opacity:0; transform:scaleX(0); will-change: transform, opacity; }
 
     /* Couple Section */
-    .couple-section { background:linear-gradient(to bottom, var(--light), var(--pink)); }
-    .couple-container { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start; }
-    .couple-card { text-align:center; opacity:0; transform:translateY(50px); will-change: transform, opacity; }
-    .couple-photo { width:300px; height:300px; border-radius:50%; margin:0 auto 2rem; border:5px solid var(--primary); box-shadow:0 10px 30px rgba(0,0,0,0.2); overflow:hidden; }
-    .couple-photo img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
-    .couple-card:hover .couple-photo img { transform:scale(1.1); }
-    .couple-name { font-family:'Playfair Display', serif; font-size:2.5rem; color:var(--secondary); margin-bottom:1rem; }
-    .couple-info { font-size:1rem; color:var(--dark); line-height:1.8; }
-    .couple-info p { margin:0.5rem 0; }
-    .couple-parents { font-style:italic; margin-top:1rem; }
+    /* Couple Section Fullscreen */
+/* Couple Section Fullscreen */
+/* Couple Section */
+.couple-section {
+    min-height: 80dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--light), var(--pink));
+    padding: 2rem;
+}
 
+/* Container pasangan */
+.couple-container {
+    display: flex;
+    gap: 3rem; /* jarak antar foto pas */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card pasangan */
+.couple-card {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    will-change: transform, opacity;
+}
+
+/* Foto pasangan lebih pas */
+.couple-photo {
+    width: 280px;  /* ukuran desktop */
+    height: 280px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    border: 5px solid var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* Teks nama */
+.couple-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+/* Info orang tua */
+.couple-info {
+    font-size: 0.95rem;
+    color: var(--dark);
+    line-height: 1.5;
+}
+
+.couple-parents {
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive mobile */
+@media(max-width:768px){
+    .couple-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .couple-photo {
+        width: 220px;
+        height: 220px;
+    }
+    .couple-name {
+        font-size: 1.8rem;
+    }
+}
     /* Event Section */
     .event-section { background:white; }
     .events-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:2rem; }
@@ -106,14 +263,14 @@
 
     /* Countdown Section */
     .countdown-section { background:linear-gradient(135deg, var(--secondary), var(--primary)); color:white; text-align:center; }
-    .countdown-section h2 { color:white !important; }
+    .countdown-section h2 { color:#8b7355 !important; }
     .countdown-container { display:flex; justify-content:center; gap:2rem; flex-wrap:wrap; margin-top:2rem; }
     .countdown-box { background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding:2rem; border-radius:15px; min-width:120px; opacity:0; transform:scale(0.8); will-change: transform, opacity; }
-    .countdown-number { font-size:3rem; font-weight:700; display:block; }
+    .countdown-number { font-size:3rem; font-weight:700; display:block;}
     .countdown-label { font-size:1rem; text-transform:uppercase; letter-spacing:2px; margin-top:0.5rem; }
 
     /* RSVP Section */
-    .rsvp-section { background:var(--pink); }
+    .rsvp-section { background:var(--pink); z-index: 1; }
     .rsvp-form { max-width:600px; margin:0 auto; background:white; padding:3rem; border-radius:20px; box-shadow:0 10px 40px rgba(0,0,0,0.1); opacity:0; transform:translateY(30px); will-change: transform, opacity; }
     .form-group { margin-bottom:1.5rem; }
     .form-group label { display:block; margin-bottom:0.5rem; color:var(--secondary); font-weight:600; }
@@ -169,6 +326,7 @@
 .gallery-section {
     padding: 60px 20px;
     text-align: center;
+    z-index: 1;
 }
 
 .gallery-container {
@@ -238,4 +396,10 @@
     max-width: 250px;
     margin-bottom: 15px;
     border-radius: 10px;
+}
+
+.gallery-section,
+.gifts-section{
+    position: relative;
+    z-index: 1;
 }
